@@ -17,7 +17,7 @@ let score =0
 greaterThan.addEventListener("click",()=>{
     if(n1>n2){
         score++
-        resetTimer(timerId)
+        restartTimer(timerId)
     }
     else{
         window.location.href = "./gameover.html"
@@ -32,7 +32,7 @@ greaterThan.addEventListener("click",()=>{
 equalTo.onclick = ()=>{
     if(n1 == n2){
         score++
-        resetTimer(timerId)
+        restartTimer(timerId)
 }
 else{
     window.location.href = "./gameover.html"
@@ -46,8 +46,8 @@ let newRandomNumber = Math.round(Math.random()*100)
 lesserThan.addEventListener("click",()=>{
     if(n1<n2){
         score++
-        resetTimer(timerId)
-    }
+        restartTimer(timerId)
+    } 
     else{
         window.location.href = "./gameover.html"
     }
@@ -65,7 +65,7 @@ var timerId;
 var time=5;
 
 function startTimer(){
-    lettime=5;
+    let time=5;
 timer.innerHTML=time;
 timerId = setInterval(()=>{
 time--
